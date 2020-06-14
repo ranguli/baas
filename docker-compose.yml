@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  baas:
+    build: "."
+    volumes:
+      - "./birbs/:/baas/birbs:Z"
+    expose:
+      - 80
+    stdin_open: true
+    tty: true
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "10"

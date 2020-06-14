@@ -28,3 +28,5 @@ def get_birbs():
     with open("../birbs.json", "r") as f:
         return json.load(f)
 
+if __name__ == "__main__":
+    app.run(host="0.0.0.0")
